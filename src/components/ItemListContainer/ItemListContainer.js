@@ -1,7 +1,12 @@
 import React from "react";
+import "./index.css";
 
-function ItemListContainer({greeting}) {
-    
-  }
+const ItemListContainer = ({greeting}) => {
+  return (
+    <div className="landing">
+      <span>{greeting}</span>
+    </div>
+  );
+};
 
-  export default ItemListContainer
+export default ItemListContainer;
