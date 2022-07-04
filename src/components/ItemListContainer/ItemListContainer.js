@@ -1,7 +1,7 @@
 import React from "react";
 
-function ItemListContainer() {
-    const BombonDDL = {}
+function ItemListContainer({greeting}) {
+    
   }
 
   export default ItemListContainer
