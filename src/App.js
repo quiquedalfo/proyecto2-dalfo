@@ -6,7 +6,7 @@ import "./index.css";
 function App() {
   return (
     <div>
-      <NavBar />
+      <Navbar />
       <ItemListContainer greeting="Bienvenidos" />
     </div>
   );
