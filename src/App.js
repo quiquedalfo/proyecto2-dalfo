@@ -5,9 +5,9 @@ import "./index.css";
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Navbar />
-      <ItemListContainer greeting="Bienvenidos" />
+      <ItemListContainer greeting={"Bienvenidos"} />
     </div>
   );
 }
