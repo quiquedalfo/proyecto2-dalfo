@@ -3,11 +3,11 @@ import Navbar from './components/NavBar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import "./index.css";
 
-function App() {
+function App() { 
   return (
     <div className='App'>
       <Navbar />
-      <ItemListContainer greeting={"Bienvenidos"} />
+      <ItemListContainer greeting={`Bienvenidos`} />
     </div>
   );
 }

@@ -1,16 +1,18 @@
 import React from "react";
-import "../../index.css";
-import ItemCount from "../ItemCount/index";
+import ItemCount from "../ItemCount/ItemCount"
 import ItemList from "../ItemList/ItemList"
 
 const ItemListContainer = ({greeting}) => {
+  function onAddCallBack (n) {
+    alert(`Agregados ${n} productos`);
+  }
   return (
     <div>
       {greeting}
       <ItemCount 
     stock = {5}
     initial = {1}
-    onAdd = {(n) => alert(`Agregados ${n} productos`)}
+    onAdd = {onAddCallBack}
     />
     <ItemList items = {[]}/>
     </div>

@@ -1,31 +1,26 @@
 import React from "react";
-import CartWidgetSVG from "../CartWidget/CartWidgetSVG"
-import styled from "styled-components"
 
-const Btn = styled.button`
-  border: none;
-  padding: 4px 8px 0 0;
-  border-radius: 4px;
-  position: relative;
-`;
-const Badge = styled.span`
-  background-color: #f00;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 50%;
-  height: 8px;
-  width: 8px;
-  font-size: 5px;
-`;
-
-const CartWidget = ({count}) => {
+const CartWidget = () => {
   return(
-    <Btn>
-      <Badge>{count}</Badge>
-      <CartWidgetSVG />
-    </Btn>
+    <button className="btn btn-outline-succes ms-auto">
+      <svg
+        xmins = "http://www.w3.org/2000/svg"
+        widths= "24"
+        height= "24"
+        fill = "none"
+        stroke= "currentColor"  
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2" 
+        className="feather feather-shopping-cart"
+        viewBox="0 0 24 24"
+      >
+      <circle cx= "9" cy="21" r="1"></circle>
+      <circle cx= "20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+      </svg>
+    </button>
   );
 };
 
-export default CartWidget 
+export default CartWidget;
