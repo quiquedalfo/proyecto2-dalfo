@@ -1,23 +1,13 @@
-import React from "react";
-import ItemCount from "../ItemCount/ItemCount"
-import ItemList from "../ItemList/ItemList"
+import React, { useEffect, useState } from "react";
 
-const ItemListContainer = ({greeting}) => {
-  function onAddCallBack (n) {
-    alert(`Agregados ${n} productos`);
-  }
-  return (
-    <div>
-      {greeting}
-      <ItemCount 
-    stock = {5}
-    initial = {1}
-    onAdd = {onAddCallBack}
-    />
-    <ItemList items = {[]}/>
-    </div>
-    
-  );
+const ItemListContainer = () => {
+  const [name, setItems] = useState([]);
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/`)
+    .then((res) => res.json())
+    .then((json) => setItems(json.name));
+},[]);
+   return <div>{JSON.stringify(name.map((el) => el.name))}</div>;
 };
 
 export default ItemListContainer;
