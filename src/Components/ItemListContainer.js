@@ -7,7 +7,7 @@ const ItemListContainer = () => {
     .then((res) => res.json())
     .then((json) => setItems(json.name));
 },[]);
-   return <div>{JSON.stringify(name.map((el) => el.name))}</div>;
+   return <div>{JSON.stringify(name.map((el) => el.name))}</div>
 };
 
 export default ItemListContainer;
