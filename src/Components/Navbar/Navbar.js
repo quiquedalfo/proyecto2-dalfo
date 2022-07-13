@@ -5,12 +5,12 @@ const Navbar = () => {
     return( 
         <nav>
         <div>
-            <img src = {imgUrl} alt="Pokemon amarillo en grande"></img>
+            <img src = {imgUrl} alt="Titulo Pokemon" className="nabvar-img"></img>
             <button>
-                    Inicio
+                    Catalogo
             </button>
             <button>
-                    Buscador
+                    Catalogo
             </button>
             <button>
                     Catalogo

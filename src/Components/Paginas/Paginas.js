@@ -3,9 +3,9 @@ const Paginas = (props) => {
     const {onLeftClick, onRightClick, page, totalPages} = props;
     return(
         <div className="paginas">
-            <button onClick={onLeftClick}><div>atras</div></button>
+            <button className="paginas-btn" onClick={onLeftClick}><div>anterior</div></button>
             <div>{page} de {totalPages}</div>
-            <button onClick={onRightClick}><div>adelante</div></button>
+            <button className="paginas-btn" onClick={onRightClick}><div>siguiente</div></button>
 
 
         </div>

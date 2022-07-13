@@ -1,5 +1,5 @@
 import React from "react";
-import {searchPokemon} from "../List/ListContainer"
+import {searchPokemon} from "../List/ListContainer";
 const {useState} = React; 
 
 const Buscador = () => {
@@ -25,10 +25,10 @@ const Buscador = () => {
         </div>
         <div>
             {pokemon && 
-            <div>
+            <div className="resultado-contenedor">
             <div>Nombre: {pokemon.name}</div>
             <div>id {pokemon.id}</div>
-            <img src= {pokemon.sprites.front_default} alt={pokemon.name}/>
+            <img src= {pokemon.sprites.other.dream_world.front_default} alt={pokemon.name}/>
             </div>
             }
             </div>
