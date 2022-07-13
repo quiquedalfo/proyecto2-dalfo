@@ -5,15 +5,20 @@ const Navbar = () => {
     return( 
         <nav>
         <div>
-            <img src = {imgUrl} alt="Titulo Pokemon" className="nabvar-img"></img>
+        <img src = {imgUrl} alt="Titulo Pokemon" className="nabvar-img"></img>
+        </div>
+        <div>
             <button>
-                    Catalogo
+                    Buscador
             </button>
             <button>
                     Catalogo
             </button>
             <button>
-                    Catalogo
+                    Equipo
+            </button>
+            <button>
+                    Favoritos
             </button>
         </div>
     </nav>
