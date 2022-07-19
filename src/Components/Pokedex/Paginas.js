@@ -12,3 +12,4 @@ const Paginas = (props) => {
     );
 }
 export default Paginas;
+

@@ -1,6 +1,6 @@
 import React from "react";
 import Pokemon from "../Pokemon/Pokemon";
-import Paginas from "../Paginas/Paginas"
+import Paginas from "./Paginas"
 
 const Pokedex = (props) => {
     const{pokemons, page, setPage, total, loading} = props;

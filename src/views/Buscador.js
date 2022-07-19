@@ -1,5 +1,6 @@
+
 import React from "react";
-import {searchPokemon} from "../List/ListContainer";
+import {searchPokemon} from "../Components/List/ListContainer";
 const {useState} = React; 
 
 const Buscador = () => {
@@ -26,8 +27,8 @@ const Buscador = () => {
         <div>
             {pokemon && 
             <div className="resultado-contenedor">
-            <div>Nombre: {pokemon.name}</div>
-            <div>id {pokemon.id}</div>
+            <div className="resultado-contenedor-name">Nombre: {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</div>
+            <div className="resultado-contenedor-id">ID {pokemon.id}</div>
             <img src= {pokemon.sprites.other.dream_world.front_default} alt={pokemon.name}/>
             </div>
             }
@@ -35,7 +36,5 @@ const Buscador = () => {
 
     </div>
 
-    );
-};
-
+    );};
 export default Buscador;
