@@ -37,5 +37,3 @@ const Pokedex = (props) => {
     </div>
   );
 };
-
-export default Pokedex;
