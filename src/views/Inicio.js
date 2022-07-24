@@ -2,13 +2,17 @@ import React from "react";
 
 const Inicio = () => {
     return(
-
-        <div className="greetings">
-            <h1> Inicio </h1>
-            <h2>Bienvenido!</h2>
-            <h3>Puedes buscar cualquier pokemon, favoritearlo y guardarlo en tu equipo.</h3>
-
+        <div>
+        <div className="inicio-titulo">
+            <h1> Bienvenido!</h1>
+        </div>
+        <div className="inicio-p">
+            <p>
+                
+            </p>
+        </div>
         </div>
     )
 }
-export default Inicio;
+
+export default Inicio
