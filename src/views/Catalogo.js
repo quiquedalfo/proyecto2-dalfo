@@ -6,7 +6,9 @@ const Catalogo = () => {
     const url = `https://fakestoreapi.com/products`;
     
     axios.get(url)
-    .then(resp => {resp})
+    .then(resp => {
+        console.log(resp.data);
+    })
     .catch(err => {
         
         console.error(err);
