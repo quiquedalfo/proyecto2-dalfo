@@ -6,7 +6,7 @@ import Catalogo from "./views/Catalogo";
 import Carrito from "./views/Carrito";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Error from './views/Error';
-import Detail from './Components/Item/Detail';
+import Detail from './views/Detail';
 
 
 
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/Inicio" element ={<Inicio />}/>
           <Route path="/Catalogo" element ={<Catalogo/>}/>
           <Route path="/Carrito" element ={<Carrito/>}/>
-          <Route path="Detail" element ={<Detail/>}/> 
+          <Route path="personaje/:id" element ={<Detail/>}/> 
           <Route path="*" element ={<Error/>}/> 
       </Routes>
       </div>

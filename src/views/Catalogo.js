@@ -8,7 +8,7 @@ const Catalogo = () => {
     const [loading, setLoading] = useState(true);
     const [count, setCount] = useState(0)
     const url = `https://fakestoreapi.com/products`;
-    
+        
     useEffect(() => {
         axios.get(url)
         .then(resp =>{ 
@@ -16,9 +16,9 @@ const Catalogo = () => {
             setProducts(resp.data);
         })
         .catch((err) => {
-            console.log(err)
+            console.log(err) 
         });
-    },[]);
+    },[ url, setProducts, setLoading]);
     
     if (loading) {
         return(
@@ -53,8 +53,8 @@ const Catalogo = () => {
                         {product.price} $</div>
                     
                     <div className='catalogo-btn'>
-                        <button className='catalogo-btn-add'>Agregar</button>
-                        <Link className="catalogo-btn-ver" to={"products/"+ products.id}>Ver</Link>
+                        <button onClick={()=>localStorage.setItem(`${products.id}`, count)} className='catalogo-btn-add'>Agregar</button>
+                        <Link className="catalogo-btn-ver" to={"products/" + products.id}>Ver</Link>
                     </div>
                     </div>
                     </div>
