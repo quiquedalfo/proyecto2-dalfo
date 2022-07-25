@@ -1,6 +1,7 @@
 import '../App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Catalogo = () => {
     const [products , setProducts] = useState([]);
@@ -18,7 +19,7 @@ const Catalogo = () => {
             console.log(err)
         });
     },[]);
-
+    
     if (loading) {
         return(
             <div className='catalogo-loading'>
@@ -48,8 +49,12 @@ const Catalogo = () => {
                             product.cantidad > 1? setCount(count - 1) : setCount(1);
                         }}>-</button>
                     </div>
-                    <div>
-                        <button>Agregar</button>
+                    <div className='catalogo-price'>
+                        {product.price} $</div>
+                    
+                    <div className='catalogo-btn'>
+                        <button className='catalogo-btn-add'>Agregar</button>
+                        <button className='catalogo-btn-see'>Ver</button>
                     </div>
                     </div>
                     </div>

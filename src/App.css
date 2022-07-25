@@ -13,14 +13,13 @@
 .catalogo-titulo{
   display: flex;
   justify-content: center;
-  margin: 5vw 0 10vw 0;
+  margin: 5vw 0 5vw 0;
+  font-size: 4vw;
 }
 .catalogo-items{
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 40vw 40vw 40vw;
-  margin: 1vw;
-  
 }
 .catalogo-item{
   display: flex;
@@ -45,17 +44,29 @@
 
 .catalogo-items img{
   display: flex;
-  width: 10vw;
+  max-height: 12vw;
+  max-width: 12vw;
+  margin: 0 0 1vw 0;
   
 }
 .catalogo-img{
   width: auto;
   justify-self: center;
+  margin: 0 0 1.5vw 0;
 }
 .catalogo-loading{
   display: flex;
 }
 
 .catalogo.botones{
-  margin: 1vw 0 0 0;
+  font-size: 2px;
+  
+}
+.catalogo-btn{
+  margin-top: 1vw;
+  max-width: 20vw;
+  
+}
+.catalogo-btn-add{
+  margin: 0 1vw 0 0;
 }
