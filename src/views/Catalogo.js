@@ -26,7 +26,6 @@ const Catalogo = () => {
             </div>
         )
     }
-   
     return(
         <div>
             <div className='catalogo-titulo'>
