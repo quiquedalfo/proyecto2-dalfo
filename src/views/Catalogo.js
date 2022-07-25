@@ -54,7 +54,7 @@ const Catalogo = () => {
                     
                     <div className='catalogo-btn'>
                         <button className='catalogo-btn-add'>Agregar</button>
-                        <button className='catalogo-btn-see'>Ver</button>
+                        <Link className="catalogo-btn-ver" to={"products/"+ products.id}>Ver</Link>
                     </div>
                     </div>
                     </div>
