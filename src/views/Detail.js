@@ -20,7 +20,7 @@ const Detail = () => {
         .catch((err) => {
             console.log(err)
         });
-    },[params.id]);
+    },[url,setCount, setLoading, setProducts]);
     
     if (loading) {
         return(

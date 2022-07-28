@@ -1,12 +1,14 @@
 import '../App.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import CountContext from '../Components/CountContext/CountContext';
 
 const Catalogo = () => {
+    const CountContextValue = useContext(CountContext)
     const [products , setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [count, setCount] = useState(0)
+    const [count, setCount ] = useState(CountContextValue)
     const url = `https://fakestoreapi.com/products`;
         
     useEffect(() => {
@@ -28,6 +30,7 @@ const Catalogo = () => {
         )
     }
     return(
+        <CountContext.Provider value={1}>
         <div>
             <div className='catalogo-titulo'>
             Catalogo
@@ -53,8 +56,10 @@ const Catalogo = () => {
                         {product.price} $</div>
                     
                     <div className='catalogo-btn'>
-                        <button onClick={()=>localStorage.setItem(`${products.id}`, count)} className='catalogo-btn-add'>Agregar</button>
-                        <Link className="catalogo-btn-ver" to={"products/" + products.id}>Ver</Link>
+                        <button 
+                        onClick={()=>localStorage.setItem(product.id, count)} 
+                        className='catalogo-btn-add'>Agregar</button>
+                        <Link className="catalogo-btn-ver" to={"Products/" + product.id}>Ver</Link>
                     </div>
                     </div>
                     </div>
@@ -65,7 +70,10 @@ const Catalogo = () => {
             </div>
         </div>
         </div>
+        </CountContext.Provider>
+
     )
+
 }
 
 export default Catalogo
