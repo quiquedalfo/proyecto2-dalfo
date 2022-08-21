@@ -7,11 +7,10 @@ import Carrito from "./views/Carrito";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Error from './views/Error';
 import Detail from './views/Detail';
-
-
+import ProductProvider from "./ProductProvider"
 const App = () => {
   return (
-    
+    <ProductProvider>
     <Router>
       <div className='App'>
       <Navbar />
@@ -20,11 +19,12 @@ const App = () => {
           <Route path="/Inicio" element ={<Inicio />}/>
           <Route path="/Catalogo" element ={<Catalogo/>}/>
           <Route path="/Carrito" element ={<Carrito/>}/>
-          <Route path="product/:id" element ={<Detail/>}/> 
+          <Route path="/product/:id" element ={<Detail/>}/> 
           <Route path="*" element ={<Error/>}/> 
       </Routes>
       </div>
       </Router>
+      </ProductProvider>
   );
 }
 
